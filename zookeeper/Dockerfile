@@ -2,7 +2,7 @@
 # VERSION        0.5
 # SOURCE         https://github.com/jplock/docker-zookeeper
 
-FROM mesos-base
+FROM quay.io/salvesdevelopment/mesos-base
 MAINTAINER Justin Plock <justin@plock.net>
 MAINTAINER Jeroen Benckhuijsen <jeroen.benckhuijsen@salvesdevelopment.nl>
 

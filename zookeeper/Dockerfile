@@ -20,3 +20,4 @@ VOLUME ["/opt/zookeeper/conf", "/tmp/zookeeper"]
 
 RUN mkdir /etc/service/zookeeper
 ADD run.sh /etc/service/zookeeper/run
+RUN chmod +x /etc/service/zookeeper/run

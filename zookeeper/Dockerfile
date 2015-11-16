@@ -2,7 +2,7 @@
 # VERSION        0.5
 # SOURCE         https://github.com/jplock/docker-zookeeper
 
-FROM quay.io/salvesdevelopment/mesos-base
+FROM phusion/baseimage:0.9.17
 MAINTAINER Justin Plock <justin@plock.net>
 MAINTAINER Jeroen Benckhuijsen <jeroen.benckhuijsen@salvesdevelopment.nl>
 
@@ -21,3 +21,6 @@ VOLUME ["/opt/zookeeper/conf", "/tmp/zookeeper"]
 RUN mkdir /etc/service/zookeeper
 ADD run.sh /etc/service/zookeeper/run
 RUN chmod +x /etc/service/zookeeper/run
+
+# Use baseimage-docker's init system.
+CMD ["/sbin/my_init"]

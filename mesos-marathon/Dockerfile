@@ -12,7 +12,9 @@
 # Source: https://github.com/mesosphere/marathon/blob/fbf627fad91e7d00b0a96d29ad35f7f4bf21507d/Dockerfile
 
 # Marathon Dockerfile
-FROM ubuntu:14.04
+FROM phusion/baseimage:0.9.17
+MAINTAINER Justin Plock <justin@plock.net>
+MAINTAINER Jeroen Benckhuijsen <jeroen.benckhuijsen@salvesdevelopment.nl>
 MAINTAINER Mesosphere <support@mesosphere.io>
 
 ## DEPENDENCIES ##
@@ -29,3 +31,5 @@ EXPOSE 8080
 WORKDIR /opt/marathon
 CMD ["--help"]
 ENTRYPOINT ["/opt/marathon/bin/start"]
+
+# TODO Replace with myinit run script
